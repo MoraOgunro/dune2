@@ -3,25 +3,37 @@
    <div class="grid-item" style="background-color: rgb(0, 0, 0)">
       <div class="item-text">
          <div class="item-header">Atreites</div>
-         <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         <div class="sub-container">
+            <div class="sub-header">Atreites</div>
+            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         </div>
       </div>
    </div>
    <div class="grid-item" style="background-color: rgb(30, 30, 40)">
       <div class="item-text">
          <div class="item-header">Fremen</div>
-         <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         <div class="sub-container">
+            <div class="sub-header">Fremen</div>
+            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         </div>
       </div>
    </div>
    <div class="grid-item" style="background-color: rgb(50, 45, 50)">
       <div class="item-text">
          <div class="item-header">Bene Gesserit</div>
-         <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         <div class="sub-container">
+            <div class="sub-header">Bene Gesserit</div>
+            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         </div>
       </div>
    </div>
    <div class="grid-item" style="background-color: rgb(30, 30, 60)">
       <div class="item-text">
          <div class="item-header">Harkonen</div>
-         <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         <div class="sub-container">
+            <div class="sub-header">Harkonen</div>
+            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+         </div>
       </div>
    </div>
 </div>
@@ -42,22 +54,37 @@ export default {};
     width: 25%
     &:hover
       width: 80%
-      .item-subtite
+      .sub-container
          transition: all 0.3s ease-in-out
          transition-delay: 0.3s
          opacity: 100%
-
+      .item-header
+         width: 0%
+         opacity: 0%
 .item-text
    display: flex
    color: white
    margin-top: max(1rem,5vh)
-   
 .item-header
-    font-size: 4rem
-    writing-mode: sideways-lr
+   transition: all 0.3s ease-in-out
+   font-weight: 500
+   font-size: 4rem
+   writing-mode: sideways-lr
+   width: auto
+   opacity: 100%
 .item-subtite
+   font-weight: 300
+   align-self: center
+   padding: 2rem
+   line-height: 2rem
+.sub-header
+   font-weight: 500
    align-self: center
    padding: 1rem
-   line-height: 2rem
+   font-size: 4rem
+.sub-container
+   display: flex
+   flex-direction: column
+   justify-content: center
    opacity: 0%
 </style>
