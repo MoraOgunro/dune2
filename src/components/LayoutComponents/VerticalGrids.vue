@@ -40,7 +40,40 @@
 </template>
 
 <script>
-export default {};
+import {ref} from 'vue'
+export default {
+   setup(){
+      const default_subtitle = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!'
+
+      const grid_list = ref([
+         {
+            header: 'Atreites',
+            subtitle: default_subtitle,
+            color: '#000000'
+         },
+         {
+            header: 'Fremen',
+            subtitle: default_subtitle,
+            color: '#1e1e28'
+         },
+         {
+            header: 'Bene Gesserit',
+            subtitle: default_subtitle,
+            color: '#322d32'
+         },
+         {
+            header: 'Harkonen',
+            subtitle: default_subtitle,
+            color: '#1e1e3c'
+         },
+      ])
+      
+      return {
+         default_subtitle,
+         grid_list
+      }
+   }
+};
 </script>
 
 <style lang="sass">
@@ -99,6 +132,7 @@ $widescreen: 1200px
       opacity: 100%
    .sub-container
       opacity: 0%
+// MOBILE        MOBILE        MOBILE
 @media screen and (max-width: $tablet)
    .grid
       flex-direction: column
@@ -110,7 +144,6 @@ $widescreen: 1200px
       width: 0px
       height: 0px
       visibility: hidden
-
    .sub-container
       margin: auto
       .item-subtite
