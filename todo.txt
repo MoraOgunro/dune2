@@ -1,7 +1,7 @@
 TODO:  
 [] add images to grid items
 [] add scroll indicator on mobile
-[] each grid item its own component
+[x] each grid item its own component
 [] each grid item has its own content
 [] convert images to videos
 [] remove scrollbar on mobile

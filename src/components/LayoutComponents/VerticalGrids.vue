@@ -1,78 +1,69 @@
 <template>
   <div class="grid">
-   <div class="grid-item" style="background-color: rgb(0, 0, 0)" onclick="">
-      <div class="item-text">
-         <div class="item-header">Atreites</div>
-         <div class="sub-container">
-            <div class="sub-header">Atreites</div>
-            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
-         </div>
-      </div>
-   </div>
-      <div id='grid-i' class="grid-item" style="background-color: rgb(30, 30, 40)">
-         <div class="item-text">
-            <div class="item-header">Fremen</div>
-            <div class="sub-container">
-               <div class="sub-header">Fremen</div>
-               <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
-            </div>
-         </div>
-      </div>
-   <div class="grid-item" style="background-color: rgb(50, 45, 50)">
-      <div class="item-text">
-         <div class="item-header">Bene Gesserit</div>
-         <div class="sub-container">
-            <div class="sub-header">Bene Gesserit</div>
-            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
-         </div>
-      </div>
-   </div>
-   <div class="grid-item" style="background-color: rgb(30, 30, 60)">
-      <div class="item-text">
-         <div class="item-header">Harkonen</div>
-         <div class="sub-container">
-            <div class="sub-header">Harkonen</div>
-            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
-         </div>
-      </div>
-   </div>
-</div>
+    <GridItem
+        :header=grid_list[0].header
+        :color=grid_list[0].color
+        :subtitle=grid_list[0].subtitle >
+    </GridItem>
+    <GridItem
+        :header=grid_list[1].header
+        :color=grid_list[1].color
+        :subtitle=grid_list[1].subtitle >
+    </GridItem>
+    <GridItem
+        :header=grid_list[2].header
+        :color=grid_list[2].color
+        :subtitle=grid_list[2].subtitle >
+    </GridItem>
+    <GridItem
+        :header=grid_list[3].header
+        :color=grid_list[3].color
+        :subtitle=grid_list[3].subtitle >
+    </GridItem>
+  </div>
 </template>
 
 <script>
-import {ref} from 'vue'
+import { ref } from "vue";
+import GridItem from "./GridItem.vue";
 export default {
-   setup(){
-      const default_subtitle = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!'
+  components: {GridItem},
+  setup() {
+    var a = 'atreites'
+    var b = '#000000'
+    const default_subtitle =
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!"
 
-      const grid_list = ref([
-         {
-            header: 'Atreites',
-            subtitle: default_subtitle,
-            color: '#000000'
-         },
-         {
-            header: 'Fremen',
-            subtitle: default_subtitle,
-            color: '#1e1e28'
-         },
-         {
-            header: 'Bene Gesserit',
-            subtitle: default_subtitle,
-            color: '#322d32'
-         },
-         {
-            header: 'Harkonen',
-            subtitle: default_subtitle,
-            color: '#1e1e3c'
-         },
-      ])
-      
-      return {
-         default_subtitle,
-         grid_list
-      }
-   }
+    const grid_list = ref([
+      {
+        header: "Atreites",
+        subtitle: default_subtitle,
+        color: "#000000",
+      },
+      {
+        header: "Fremen",
+        subtitle: default_subtitle,
+        color: "#1e1e28",
+      },
+      {
+        header: "Bene Gesserit",
+        subtitle: default_subtitle,
+        color: "#322d32",
+      },
+      {
+        header: "Harkonen",
+        subtitle: default_subtitle,
+        color: "#1e1e3c",
+      },
+    ]);
+
+    return {
+      default_subtitle,
+      grid_list,
+      a,
+      b
+    };
+  },
 };
 </script>
 
@@ -104,7 +95,7 @@ $widescreen: 1200px
    display: flex
    flex-direction: column
    justify-content: center
-// DESKTOP        DESKTOP        DESKTOP 
+// DESKTOP        DESKTOP        DESKTOP
 @media screen and (min-width: $tablet)
    .grid
       flex-direction: row
@@ -147,5 +138,5 @@ $widescreen: 1200px
    .sub-container
       margin: auto
       .item-subtite
-      opacity: 100%
+         opacity: 100%
 </style>
