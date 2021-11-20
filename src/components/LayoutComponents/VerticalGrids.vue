@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-   <div class="grid-item" style="background-color: rgb(0, 0, 0)">
+   <div class="grid-item" style="background-color: rgb(0, 0, 0)" onclick="">
       <div class="item-text">
          <div class="item-header">Atreites</div>
          <div class="sub-container">
@@ -9,15 +9,15 @@
          </div>
       </div>
    </div>
-   <div class="grid-item" style="background-color: rgb(30, 30, 40)">
-      <div class="item-text">
-         <div class="item-header">Fremen</div>
-         <div class="sub-container">
-            <div class="sub-header">Fremen</div>
-            <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+      <div id='grid-i' class="grid-item" style="background-color: rgb(30, 30, 40)">
+         <div class="item-text">
+            <div class="item-header">Fremen</div>
+            <div class="sub-container">
+               <div class="sub-header">Fremen</div>
+               <div class="item-subtite">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!</div>
+            </div>
          </div>
       </div>
-   </div>
    <div class="grid-item" style="background-color: rgb(50, 45, 50)">
       <div class="item-text">
          <div class="item-header">Bene Gesserit</div>
@@ -44,47 +44,83 @@ export default {};
 </script>
 
 <style lang="sass">
-.grid
-    height: 100%
-    display: flex
-    flex-direction: row
-.grid-item
-    display: flex
-    transition: all 0.3s ease-in-out
-    width: 25%
-    &:hover
-      width: 80%
-      .sub-container
-         transition: all 0.3s ease-in-out
-         transition-delay: 0.3s
-         opacity: 100%
-      .item-header
-         width: 0%
-         opacity: 0%
-.item-text
-   display: flex
-   color: white
-   margin-top: max(1rem,5vh)
-.item-header
-   transition: all 0.3s ease-in-out
-   font-weight: 500
-   font-size: 4rem
-   writing-mode: sideways-lr
-   width: auto
-   opacity: 100%
-.item-subtite
-   font-weight: 300
-   align-self: center
-   padding: 2rem
-   line-height: 2rem
-.sub-header
-   font-weight: 500
-   align-self: center
-   padding: 1rem
-   font-size: 4rem
-.sub-container
-   display: flex
-   flex-direction: column
-   justify-content: center
-   opacity: 0%
+$tablet: 600px
+$medium-desktop: 768px
+$desktop: 992px
+$widescreen: 1200px
+@media screen and (min-width: $tablet)
+   .grid
+      height: 100%
+      display: flex
+      flex-direction: row
+   .grid-item
+      display: flex
+      transition: all 0.3s ease-in-out
+      width: 25%
+      &:hover
+         width: 80%
+         .sub-container
+            transition: all 0.3s ease-in-out
+            transition-delay: 0.3s
+            opacity: 100%
+         .item-header
+            width: 0%
+            opacity: 0%
+   .item-text
+      display: flex
+      color: white
+      margin-top: max(1rem,5vh)
+   .item-header
+      transition: all 0.3s ease-in-out
+      font-weight: 500
+      font-size: 4rem
+      writing-mode: sideways-lr
+      width: auto
+      opacity: 100%
+   .item-subtite
+      font-weight: 300
+      align-self: center
+      padding: 2rem
+      line-height: 2rem
+   .sub-header
+      font-weight: 500
+      align-self: center
+      padding: 1rem
+      font-size: 4rem
+   .sub-container
+      display: flex
+      flex-direction: column
+      justify-content: center
+      opacity: 0%
+@media screen and (max-width: $tablet)
+   .grid
+      flex-direction: column
+   .grid-item
+      flex-shrink: 0
+      width: 100%
+      height: 100vh
+      display: flex
+   .item-text
+      display: flex
+      color: white
+   .item-header
+      width: 0px
+      height: 0px
+      visibility: hidden
+   .item-subtite
+      font-weight: 300
+      align-self: center
+      padding: 2rem
+      line-height: 2rem
+      opacity: 100%
+   .sub-header
+      font-weight: 500
+      align-self: center
+      padding: 1rem
+      font-size: 4rem
+   .sub-container
+      margin: auto
+      display: flex
+      flex-direction: column
+      justify-content: center
 </style>
