@@ -48,13 +48,34 @@ $tablet: 600px
 $medium-desktop: 768px
 $desktop: 992px
 $widescreen: 1200px
+.grid
+   height: 100%
+   display: flex
+.grid-item
+   display: flex
+   height: 100vh
+   display: flex
+.item-text
+   display: flex
+   color: white
+.item-subtite
+   font-weight: 300
+   align-self: center
+   padding: 2rem
+   line-height: 2rem
+.sub-header
+   font-weight: 500
+   align-self: center
+   padding: 1rem
+   font-size: 4rem
+.sub-container
+   display: flex
+   flex-direction: column
+   justify-content: center
 @media screen and (min-width: $tablet)
    .grid
-      height: 100%
-      display: flex
       flex-direction: row
    .grid-item
-      display: flex
       transition: all 0.3s ease-in-out
       width: 25%
       &:hover
@@ -67,8 +88,6 @@ $widescreen: 1200px
             width: 0%
             opacity: 0%
    .item-text
-      display: flex
-      color: white
       margin-top: max(1rem,5vh)
    .item-header
       transition: all 0.3s ease-in-out
@@ -77,50 +96,21 @@ $widescreen: 1200px
       writing-mode: sideways-lr
       width: auto
       opacity: 100%
-   .item-subtite
-      font-weight: 300
-      align-self: center
-      padding: 2rem
-      line-height: 2rem
-   .sub-header
-      font-weight: 500
-      align-self: center
-      padding: 1rem
-      font-size: 4rem
    .sub-container
-      display: flex
-      flex-direction: column
-      justify-content: center
       opacity: 0%
 @media screen and (max-width: $tablet)
    .grid
       flex-direction: column
-   .grid-item
-      flex-shrink: 0
-      width: 100%
-      height: 100vh
-      display: flex
-   .item-text
-      display: flex
-      color: white
+      .grid-item
+         flex-shrink: 0
+         width: 100%
    .item-header
       width: 0px
       height: 0px
       visibility: hidden
-   .item-subtite
-      font-weight: 300
-      align-self: center
-      padding: 2rem
-      line-height: 2rem
-      opacity: 100%
-   .sub-header
-      font-weight: 500
-      align-self: center
-      padding: 1rem
-      font-size: 4rem
+
    .sub-container
       margin: auto
-      display: flex
-      flex-direction: column
-      justify-content: center
+      .item-subtite
+      opacity: 100%
 </style>
