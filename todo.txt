@@ -1,0 +1,20 @@
+TODO:  
+[] add images to grid items
+[] add scroll indicator on mobile
+[] each grid item its own component
+[] each grid item has its own content
+[] convert images to videos
+[] remove scrollbar on mobile
+
+TODO: 
+[] each grid item clickable
+[] each grid item goes to page
+[] each page has music
+[] button to turn music off
+[] fill pages with content
+[] background images
+
+TODO: 
+[] host on git or firebase
+[] update portfolio
+[] update resume

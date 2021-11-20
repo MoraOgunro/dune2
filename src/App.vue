@@ -44,7 +44,7 @@ body, html
   width: 100vw
   height: 100%
   overflow-x: hidden
-  overflow-y: hidden
+  overflow-y: visible
 /* Wrap all full screen content in this class */
 .full-screen-content
   flex: 1

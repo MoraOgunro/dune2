@@ -44,16 +44,15 @@ export default {};
 </script>
 
 <style lang="sass">
-$tablet: 600px
+$tablet: 830px
 $medium-desktop: 768px
 $desktop: 992px
 $widescreen: 1200px
 .grid
    height: 100%
+   width: 100vw
    display: flex
 .grid-item
-   display: flex
-   height: 100vh
    display: flex
 .item-text
    display: flex
@@ -72,12 +71,14 @@ $widescreen: 1200px
    display: flex
    flex-direction: column
    justify-content: center
+// DESKTOP        DESKTOP        DESKTOP 
 @media screen and (min-width: $tablet)
    .grid
       flex-direction: row
    .grid-item
-      transition: all 0.3s ease-in-out
       width: 25%
+      min-width: 3%
+      transition: all 0.3s ease-in-out
       &:hover
          width: 80%
          .sub-container
@@ -101,9 +102,10 @@ $widescreen: 1200px
 @media screen and (max-width: $tablet)
    .grid
       flex-direction: column
-      .grid-item
-         flex-shrink: 0
-         width: 100%
+   .grid-item
+      height: 100vh
+      flex-shrink: 0
+      width: 100%
    .item-header
       width: 0px
       height: 0px
