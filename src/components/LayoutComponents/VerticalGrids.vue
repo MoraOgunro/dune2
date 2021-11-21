@@ -1,24 +1,11 @@
 <template>
   <div class="grid">
     <GridItem
-        :header=grid_list[0].header
-        :color=grid_list[0].color
-        :subtitle=grid_list[0].subtitle >
-    </GridItem>
-    <GridItem
-        :header=grid_list[1].header
-        :color=grid_list[1].color
-        :subtitle=grid_list[1].subtitle >
-    </GridItem>
-    <GridItem
-        :header=grid_list[2].header
-        :color=grid_list[2].color
-        :subtitle=grid_list[2].subtitle >
-    </GridItem>
-    <GridItem
-        :header=grid_list[3].header
-        :color=grid_list[3].color
-        :subtitle=grid_list[3].subtitle >
+      v-for="(item, index) in grid_list"
+      :key="index"
+      :header=item.header
+      :color=item.color
+      :subtitle=item.subtitle>
     </GridItem>
   </div>
 </template>
@@ -29,8 +16,6 @@ import GridItem from "./GridItem.vue";
 export default {
   components: {GridItem},
   setup() {
-    var a = 'atreites'
-    var b = '#000000'
     const default_subtitle =
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat doloribus eum, aperiam, dolore iusto distinctio deleniti perspiciatis molestiae nemo quisquam saepe nostrum ducimus quos ratione odit quis maxime accusantium, exercitationem labore amet natus! Voluptatibus mollitia pariatur aliquam, vitae ullam sequi!"
 
@@ -39,29 +24,31 @@ export default {
         header: "Atreites",
         subtitle: default_subtitle,
         color: "#000000",
+        image: null
       },
       {
         header: "Fremen",
         subtitle: default_subtitle,
         color: "#1e1e28",
+        image: null
       },
       {
         header: "Bene Gesserit",
         subtitle: default_subtitle,
         color: "#322d32",
+        image: null
       },
       {
         header: "Harkonen",
         subtitle: default_subtitle,
         color: "#1e1e3c",
+        image: null
       },
     ]);
 
     return {
       default_subtitle,
-      grid_list,
-      a,
-      b
+      grid_list
     };
   },
 };

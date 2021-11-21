@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-item" :style="{ 'background-color': color }" onclick="">
+  <div class="grid-item">
     <div class="item-text">
       <div class="item-header">{{ header }}</div>
       <div class="sub-container">
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+
 export default {
   props: {
     header: String,
@@ -18,8 +19,8 @@ export default {
     color: String,
   },
   setup() {
-
-  }
+    
+  },
 };
 </script>
 
@@ -29,7 +30,13 @@ $medium-desktop: 768px
 $desktop: 992px
 $widescreen: 1200px
 .grid-item
+    position: relative
     display: flex
+    background-image: url('ATREITES.jpg')
+    background-size: cover
+    background-position-x: -300px
+    background-color: rgba(0,0 ,0 ,0.5 )
+    
 .item-text
     display: flex
     color: white
@@ -52,8 +59,10 @@ $widescreen: 1200px
     .grid-item
         width: 25%
         min-width: 3%
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.70)
         transition: all 0.3s ease-in-out
         &:hover
+            box-shadow: inset 0 0 0 1000px rgba(0,0,0,.90)
             width: 80%
             .sub-container
                 transition: all 0.3s ease-in-out
@@ -75,6 +84,7 @@ $widescreen: 1200px
         opacity: 0%
 @media screen and (max-width: $tablet)
     .grid-item
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.80)
         height: 100vh
         flex-shrink: 0
         width: 100%

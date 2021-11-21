@@ -1,5 +1,5 @@
 TODO:  
-[] add images to grid items
+[x] add images to grid items
 [] add scroll indicator on mobile
 [x] each grid item its own component
 [] each grid item has its own content
