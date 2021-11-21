@@ -1,19 +1,35 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import BeneGesserit from '../views/BeneGesseritView.vue'
+import AtreitesView from '../views/AtreitesView.vue'
+import FremenView from '../views/FremenView.vue'
+import HarkonenView from '../views/HarkonenView.vue'
+import VerticalGrids from '../components/LayoutComponents/VerticalGrids.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: VerticalGrids 
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/Atreites',
+    name: 'Atreites',
+    component: AtreitesView
+  },
+  {
+    path: '/Fremen',
+    name: 'Fremen',
+    component: FremenView
+  },
+  {
+    path: '/BeneGesserit',
+    name: 'BeneGesserit',
+    component: BeneGesserit
+  },
+  {
+    path: '/Harkonen',
+    name: 'Harkonen',
+    component: HarkonenView
   }
 ]
 

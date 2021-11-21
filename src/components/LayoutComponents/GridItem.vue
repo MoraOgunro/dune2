@@ -1,26 +1,26 @@
 <template>
   <div class="grid-item">
-    <div class="item-text">
-      <div class="item-header">{{ header }}</div>
-      <div class="sub-container">
-        <div class="sub-header">{{ header }}</div>
-        <div class="item-subtite">{{ subtitle }}</div>
+    <router-link :to="link">
+      <div class="item-text">
+        <div class="item-header">{{ header }}</div>
+        <div class="sub-container">
+          <div class="sub-header">{{ header }}</div>
+          <div class="item-subtite">{{ subtitle }}</div>
+        </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
 <script>
-
 export default {
   props: {
     header: String,
     subtitle: String,
     color: String,
+    link: String
   },
-  setup() {
-    
-  },
+  setup() {},
 };
 </script>
 
@@ -29,14 +29,17 @@ $tablet: 830px
 $medium-desktop: 768px
 $desktop: 992px
 $widescreen: 1200px
+a
+    text-decoration: none
+    display: flex
 .grid-item
     position: relative
     display: flex
-    background-image: url('ATREITES.jpg')
+    background-image: url('/src/assets/ATREITES.jpg')
     background-size: cover
     background-position-x: -300px
-    background-color: rgba(0,0 ,0 ,0.5 )
-    
+    background-color: rgba(0,0 ,0 ,0.5)
+
 .item-text
     display: flex
     color: white
@@ -50,6 +53,7 @@ $widescreen: 1200px
     align-self: center
     padding: 1rem
     font-size: 4rem
+    line-height: 4rem
 .sub-container
     display: flex
     flex-direction: column
@@ -77,14 +81,14 @@ $widescreen: 1200px
         transition: all 0.3s ease-in-out
         font-weight: 500
         font-size: 4rem
-        writing-mode: sideways-lr
+        writing-mode: vertical-lr
         width: auto
         opacity: 100%
     .sub-container
         opacity: 0%
 @media screen and (max-width: $tablet)
     .grid-item
-        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.80)
+        box-shadow: inset 0 0 0 100vh rgba(0,0,0,.80)
         height: 100vh
         flex-shrink: 0
         width: 100%

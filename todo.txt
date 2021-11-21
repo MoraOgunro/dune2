@@ -7,8 +7,8 @@ TODO:
 [] remove scrollbar on mobile
 
 TODO: 
-[] each grid item clickable
-[] each grid item goes to page
+[x] each grid item clickable
+[x] each grid item goes to page
 [] each page has music
 [] button to turn music off
 [] fill pages with content

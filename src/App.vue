@@ -3,7 +3,7 @@
     <div class="full-screen-content">
       <div class="top"></div>
       <div class="middle">
-        <vertical-grids/>
+        <router-view></router-view>
       </div>
       <!-- Start of Foot Component !-->
       <div class="bottom">
@@ -14,11 +14,9 @@
 </template>
 
 <script>
-  import VerticalGrids from './components/LayoutComponents/VerticalGrids.vue'
+
 export default {
-  components: {
-    VerticalGrids
-  }
+
 }
 </script>
 
@@ -72,8 +70,13 @@ body, html
   flex-shrink: 1
   flex-grow: 0
 @media screen and (max-width: $tablet)
+  html
+    &::-webkit-scrollbar
+      display: none
+    -ms-overflow-style: none  /* IE and Edge */
+    scrollbar-width: 0px  /* Firefox */
   .full-screen
     overflow-y: auto
     scrollbar-color: black white
-    scrollbar-width: thin
+   
 </style>
