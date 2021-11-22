@@ -22,11 +22,11 @@ export default {
 
     const grid_list = ref([
       {
-        header: "Atreites",
+        header: "Atreides",
         subtitle: default_subtitle,
         color: "#000000",
         image: null,
-        link: '/Atreites'
+        link: '/Atreides'
       },
       {
         header: "Fremen",

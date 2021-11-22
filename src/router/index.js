@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import BeneGesserit from '../views/BeneGesseritView.vue'
-import AtreitesView from '../views/AtreitesView.vue'
+import AtreidesView from '../views/AtreidesView.vue'
 import FremenView from '../views/FremenView.vue'
 import HarkonenView from '../views/HarkonenView.vue'
 import VerticalGrids from '../components/LayoutComponents/VerticalGrids.vue'
@@ -12,9 +12,9 @@ const routes = [
     component: VerticalGrids 
   },
   {
-    path: '/Atreites',
-    name: 'Atreites',
-    component: AtreitesView
+    path: '/Atreides',
+    name: 'Atreides',
+    component: AtreidesView
   },
   {
     path: '/Fremen',

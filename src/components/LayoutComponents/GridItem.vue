@@ -1,6 +1,6 @@
 <template>
   <div class="grid-item">
-    <router-link :to="link">
+    <router-link :to="link" class="router-link">
       <div class="item-text">
         <div class="item-header">{{ header }}</div>
         <div class="sub-container">
@@ -29,17 +29,12 @@ $tablet: 830px
 $medium-desktop: 768px
 $desktop: 992px
 $widescreen: 1200px
-a
-    text-decoration: none
-    display: flex
 .grid-item
     position: relative
     display: flex
     background-image: url('/src/assets/ATREITES.jpg')
     background-size: cover
     background-position-x: -300px
-    background-color: rgba(0,0 ,0 ,0.5)
-
 .item-text
     display: flex
     color: white
@@ -63,10 +58,10 @@ a
     .grid-item
         width: 25%
         min-width: 3%
-        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.70)
+        box-shadow: inset 0 0 0 100vw rgba(0,0,0,.70)
         transition: all 0.3s ease-in-out
         &:hover
-            box-shadow: inset 0 0 0 1000px rgba(0,0,0,.90)
+            box-shadow: inset 0 0 0 100vw rgba(0,0,0,.90)
             width: 80%
             .sub-container
                 transition: all 0.3s ease-in-out

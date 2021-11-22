@@ -22,11 +22,21 @@ export default {
 
 <style lang="sass">
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap')
+
 $tablet: 600px
 $medium-desktop: 768px
 $desktop: 992px
 $widescreen: 1200px
-body, html
+html
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  -ms-overflow-style: none /* for Internet Explorer, Edge */
+  scrollbar-width: none /* for Firefox */
+  overflow-y: scroll
+  &::-webkit-scrollbar
+    display: none
+body
   margin: 0
   padding: 0
 #app
@@ -34,15 +44,12 @@ body, html
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
-  color: #2c3e50
   height: 100vh
 /* Wrap page in this for full screen, must be used with full-screen-content class */
 .full-screen
   display: flex
   width: 100vw
   height: 100%
-  overflow-x: hidden
-  overflow-y: visible
 /* Wrap all full screen content in this class */
 .full-screen-content
   flex: 1
@@ -55,14 +62,12 @@ body, html
   flex-shrink: 1
   height: 0rem
   width: 100%
-  background-color: blue
   min-height: 0px
 /* Wrap full screen middle content */
 .middle
   flex: 1
   min-height: 150px
   width: 100%
-  background-color: rgb(50,50 ,50 )
 /* Wrap footer content in this to get bottom allignment */
 .bottom
   align-self: flex-end
@@ -71,10 +76,7 @@ body, html
   flex-grow: 0
 @media screen and (max-width: $tablet)
   html
-    &::-webkit-scrollbar
-      display: none
-    -ms-overflow-style: none  /* IE and Edge */
-    scrollbar-width: 0px  /* Firefox */
+
   .full-screen
     overflow-y: auto
     scrollbar-color: black white
