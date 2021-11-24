@@ -4,7 +4,7 @@ TODO:
 [x] each grid item its own component
 [] each grid item has its own content
 [] convert images to videos
-[] remove scrollbar on mobile
+[x] remove scrollbar on mobile
 
 TODO: 
 [x] each grid item clickable

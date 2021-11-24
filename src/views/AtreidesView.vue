@@ -24,7 +24,9 @@
             <button class="button">RETURN</button>
           </router-link>
         </div>
-        <div class="column bottom-right-title">PICTURE</div>
+        <div class="column piccol">
+          <div class="picture"></div>
+        </div>
       </div>
     </div>
 
@@ -33,23 +35,32 @@
 </template>
 
 <script>
-export default {};
+export default {
+  setup (){
+    const url = '/home/mora/projects/dune2/src/views/DUKE.png'
+    return{
+      url
+    }
+  }
+};
 </script>
 
 <style lang="sass">
+$font-color: white
+$bg-color: black
 .button
-  font-weight: 800 
+  font-weight: 800
   letter-spacing: 3px
-  border-color: white
+  border-color: $font-color
   margin-top: 1rem
-  background-color: #1b5633
-  color: white
+  background-color: $bg-color
+  color: $font-color
   font-size: 1rem
   border-width: 2px
-  border-radius: 25px    
+  border-radius: 25px
 .button:hover
-  background-color: white
-  color: #1b5633
+  background-color: $font-color
+  color: $bg-color
   border-width: 0px
 .hero-head
   display: flex
@@ -58,23 +69,37 @@ export default {};
   justify-content: flex-start
   font-style: italic
 .hero
-  color: white
-  background-color: #1b5633
+  color: $font-color
+  background-color: $bg-color
   padding: 2rem
 p
   font-size: 1rem
   font-weight: 200
-.bottom-right-title
-  font-weight: 800
-  font-size: 4rem
-  color: #1b5633
-  -webkit-text-stroke: 2px white
+.piccol
+  display: flex
+  justify-content: center
+  
+.picture
+  flex-shrink: 1
+  align-self: center
+  background-image: url('/src/assets/DUKE.png')
+  height: 100%
+  width: 100%
+  min-height: 350px
+  background-size: cover
+  background-position: center
+  border: 2px solid $font-color
+
+  max-width: 650px
 .hero-foot
   display: flex
   font-weight: 800
   font-size: min(15vw,20vh)
-  color: #1b5633
-  -webkit-text-stroke: 2px white
+  color: $bg-color
+  -webkit-text-stroke: 2px $font-color
   justify-content: flex-end
   font-style: italic
+@media screen and (max-width: 769px)
+  .hero-head, .hero-foot
+    justify-content: center
 </style>
