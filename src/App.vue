@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,800;1,800;1,900&display=swap')
 
 $tablet: 600px
 $medium-desktop: 768px
