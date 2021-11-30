@@ -9,10 +9,14 @@ TODO:
 TODO: 
 [x] each grid item clickable
 [x] each grid item goes to page
+[x] Atreides Page
+[x] Fremen Page
+[x] Bene Gesserit Page
+[x] Harkonen Page
 [] each page has music
 [] button to turn music off
-[] fill pages with content
-[] background images
+[x] fill pages with content
+[x] background images
 
 TODO: 
 [] host on git or firebase

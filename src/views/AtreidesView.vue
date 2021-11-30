@@ -47,12 +47,14 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
 $font-color: white
 $bg-color: black
+$header-color: white
 $transparent: rgba(0, 0, 0, 0)
+
 html
-  background-color: black
+  background-color: $bg-color
   overflow: hidden
 .bg-image
   position: absolute
@@ -63,6 +65,7 @@ html
   background-position: center
   filter: blur(4px)
 .hero-head
+  color: $header-color
   display: flex
   font-weight: 800
   font-size: min(15vw,20vh)
@@ -82,7 +85,7 @@ html
   font-weight: 800
   font-size: min(15vw,20vh)
   color: $transparent
-  -webkit-text-stroke: 2px $font-color
+  -webkit-text-stroke: 2px $header-color
   justify-content: flex-end
   font-style: italic
 .column
@@ -118,6 +121,8 @@ html
   max-width: 650px
 
 @media screen and (max-width: 769px)
+  html
+    overflow-y: scroll
   .hero-head, .hero-foot
     justify-content: center
 </style>

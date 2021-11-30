@@ -30,6 +30,7 @@ $widescreen: 1200px
 html
   margin: 0
   padding: 0
+  background-color: black
   overflow-x: hidden
   -ms-overflow-style: none /* for Internet Explorer, Edge */
   scrollbar-width: none /* for Firefox */
@@ -76,7 +77,6 @@ body
   flex-grow: 0
 @media screen and (max-width: $tablet)
   html
-
   .full-screen
     overflow-y: auto
     scrollbar-color: black white
