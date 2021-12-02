@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-item">
+  <div class="grid-item" :style="inlineStyle">
     <router-link :to="link" class="router-link">
       <div class="item-text">
         <div class="item-header">{{ header }}</div>
@@ -13,14 +13,26 @@
 </template>
 
 <script>
+import { computed } from 'vue'
 export default {
   props: {
     header: String,
     subtitle: String,
     color: String,
-    link: String
+    link: String,
+    background: String
   },
-  setup() {},
+  setup(props) {
+    
+    const inlineStyle = computed(()=>{
+         return {
+             backgroundImage: `url(${require('@/assets/images/'+ props.background)})`
+             }
+    })
+    return {
+        inlineStyle
+    }
+  },
 };
 </script>
 
@@ -32,7 +44,7 @@ $widescreen: 1200px
 .grid-item
     position: relative
     display: flex
-    background-image: url('/src/assets/ATREITES.jpg')
+    //background-image: url('/src/assets/ATREITES.jpg')
     background-size: cover
     background-position-x: -300px
 .item-text
@@ -58,7 +70,7 @@ $widescreen: 1200px
     .grid-item
         width: 25%
         min-width: 3%
-        box-shadow: inset 0 0 0 100vw rgba(0,0,0,.70)
+        box-shadow: inset 0 0 0 100vw rgba(0,0,0,.60)
         transition: all 0.3s ease-in-out
         &:hover
             box-shadow: inset 0 0 0 100vw rgba(0,0,0,.90)

@@ -6,7 +6,8 @@
       :header=item.header
       :color=item.color
       :subtitle=item.subtitle
-      :link="item.link">
+      :link="item.link"
+      :background="item.background">
     </GridItem>
   </div>
 </template>
@@ -26,28 +27,32 @@ export default {
         subtitle: default_subtitle,
         color: "#000000",
         image: null,
-        link: '/Atreides'
+        link: '/Atreides',
+        background: 'ATREIDES.png'
       },
       {
         header: "Fremen",
         subtitle: default_subtitle,
         color: "#1e1e28",
         image: null,
-        link: '/Fremen'
+        link: '/Fremen',
+        background: 'FGrid.png'
       },
       {
         header: "Bene Gesserit",
         subtitle: default_subtitle,
         color: "#322d32",
         image: null,
-        link: '/BeneGesserit'
+        link: '/BeneGesserit',
+        background: 'BGGrid.png'
       },
       {
         header: "Harkonen",
         subtitle: default_subtitle,
         color: "#1e1e3c",
         image: null,
-        link: '/Harkonen'
+        link: '/Harkonen',
+        background:'HKGrid.png'
       },
     ]);
 
