@@ -1,4 +1,5 @@
-# dune2
+# Dune Website
+![Sample](https://user-images.githubusercontent.com/18519716/144550152-19e7b770-5b86-447d-b2a7-169d8310edfb.png)
 
 ## Project setup
 ```
